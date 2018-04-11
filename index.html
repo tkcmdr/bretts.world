@@ -15,7 +15,7 @@
 
     <body>
         <!-- The content of the page, changed dynamically -->
-        <div id="content-container" class="content-container">
+        <div id="main" class="main">
             <!-- The topmost navigation menu -->
             <div class="page-header">
                 <img src="img/globe.svg" id=site-icon>
@@ -23,34 +23,17 @@
                 <h1 class="header-text right">think bigger.</h1>
             </div>
 
-            <div id="content">
-                <div class="content-item">
-                    <img class="content-image" src="img/globe.svg">
-                    <h1 class="content-title">It's that time of year again.</h1>
-                </div>
-                <div class="content-item">
-                    <img class="content-image" src="img/globe.svg">
-                    <h1 class="content-title">On the subject of groups and other ponderings</h1>
-                </div>
-                <div class="content-item">
-                    <img class="content-image" src="img/globe.svg">
-                    <h1 class="content-title">Why the NVIDIA Partner Program is stupid.</h1>
-                </div>
-                <div class="content-item">
-                    <img class="content-image" src="img/globe.svg">
-                    <h1 class="content-title">The GLOOOOOBE!</h1>
-                </div>
-                <div class="content-item">
-                    <img class="content-image" src="img/globe.svg">
-                    <h1 class="content-title">W00T!</h1>
-                </div>
+            <div id="content-container">
+                <!--<div class="content-item">
+                    <img class="content-image" src="img/...">
+                    <h1 class="content-title">...</h1>
+                </div>-->
             </div>
         </div>
 
         <!-- Scripts that drive the site interactivity -->
         <scripts>
-            <script src="data/content.js"></script>
-            <script src="js/main.js"></script>
+            <script src="js/content_loader.js"></script>
         </scripts>
     </body>
 </html>
