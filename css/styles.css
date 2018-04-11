@@ -1,0 +1,68 @@
+:root {
+    --header-height: 100px;
+}
+
+body {
+    background-color: #E6433E;
+    font-family: 'Play', sans-serif;
+}
+
+.page-header {
+    /* position: relative; */
+    color: #FFFFFF;
+    height: var(--header-height);
+    width: 100%;
+    /* right: 10%; */
+    overflow: hidden;
+}
+
+.header-text {
+    margin: 0;
+    height: 100%;
+    line-height: var(--header-height);
+    font-size: 32px;
+    font-weight: bold;
+    float: left;
+}
+
+.header-text.right {
+    right: 0px;
+    font-style: italic;
+    text-align: right;
+    font-weight: normal;
+    float: right;
+}
+
+#site-icon {
+    height: 100%;
+    float: left;
+}
+
+.content-container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.content-item {
+    display: block;
+    margin: 25px 0 0 0;
+    width: 100%;
+    height: 20vh;
+    background-color: #333333;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.content-title {
+    margin: 20px auto;
+    max-height: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.content-image {
+    height: 100%;
+    float: left;
+}
