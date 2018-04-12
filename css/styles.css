@@ -66,3 +66,27 @@ body {
     height: 100%;
     float: left;
 }
+
+@keyframes slideLeft {
+    0% {
+        transform: translate(200px, 0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translate(200px, 0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}

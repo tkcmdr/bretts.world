@@ -3,5 +3,20 @@
         "title": "It's that time of year again.",
         "image": "globe.svg",
         "body": "Hello, world!"
+    },
+    {
+        "title": "The NVIDIA Hegemony",
+        "image": "globe.svg",
+        "body": "Hello, world!"
+    },
+    {
+        "title": "A day in the life of an AMD fanboy",
+        "image": "globe.svg",
+        "body": "Hello, world!"
+    },
+    {
+        "title": "Group management and other ponderings",
+        "image": "globe.svg",
+        "body": "Hello, world!"
     }
 ]
