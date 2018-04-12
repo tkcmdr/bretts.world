@@ -1,22 +1,12 @@
 [
     {
-        "title": "Group management and other ponderings",
+        "title": "About me!",
         "image": "globe.svg",
-        "articlePath": "groups-management.html"
+        "articlePath": "about-me.html"
     },
     {
-        "title": "The NVIDIA Hegemony",
-        "image": "globe.svg",
-        "articlePath": "placeholder.html"
-    },
-    {
-        "title": "A day in the life of an AMD fanboy",
-        "image": "globe.svg",
-        "articlePath": "placeholder.html"
-    },
-    {
-        "title": "It's that time of year again.",
-        "image": "globe.svg",
-        "articlePath": "placeholder.html"
+        "title": "So you want to learn to program ROBLOX games? Start here!",
+        "image": "tkcmdr-avatar.png",
+        "articlePath": "so-you-want-to-learn-roblox.html"
     }
 ]

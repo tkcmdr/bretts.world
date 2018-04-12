@@ -24,13 +24,13 @@ function CreateContentItem(item, isRight, contentID)
     return newHTML;
 }
 
-function LoadContentBody(temp)
+function LoadBodyContent(xhr, bodyID)
 {
-    if (this.status == "200")
+    var body = document.getElementById(bodyID);
+
+    if (xhr.status == "200" && body != "undefined")
     {
-        var responseText    = this.response;
-        
-        console.log(temp, responseText);
+       body.innerHTML = xhr.responseText;
     }
 }
 
@@ -53,17 +53,16 @@ function LoadContent()
             {
                 contentContainer.appendChild(contentHTML);
 
-                DataRequest("text",
+                DataRequest(
+                    "text",
                     "GET",
                     articleDir + item.articlePath,
                     function()
                     {
-                        LoadContentBody(contentHTML.id);
+                        LoadBodyContent(this, contentHTML.id + "-body");
                     },
                     true
                 );
-
-                //document.getElementById(contentHTML.id + "-body").innerHTML = item.body;
             }, itemCounter * 250);                                
         });
     }
