@@ -1,12 +1,12 @@
 [
     {
         "title": "About me!",
-        "image": "globe.svg",
+        "image": "articles/anon-avatar.png",
         "articlePath": "about-me.html"
     },
     {
         "title": "So you want to learn to program ROBLOX games? Start here!",
-        "image": "tkcmdr-avatar.png",
+        "image": "articles/tkcmdr-avatar.png",
         "articlePath": "so-you-want-to-learn-roblox.html"
     }
 ]
