@@ -1,22 +1,22 @@
 [
     {
-        "title": "It's that time of year again.",
+        "title": "Group management and other ponderings",
         "image": "globe.svg",
-        "body": "Hello, world!"
+        "articlePath": "groups-management.html"
     },
     {
         "title": "The NVIDIA Hegemony",
         "image": "globe.svg",
-        "body": "Hello, world!"
+        "articlePath": "placeholder.html"
     },
     {
         "title": "A day in the life of an AMD fanboy",
         "image": "globe.svg",
-        "body": "Hello, world!"
+        "articlePath": "placeholder.html"
     },
     {
-        "title": "Group management and other ponderings",
+        "title": "It's that time of year again.",
         "image": "globe.svg",
-        "body": "Hello, world!"
+        "articlePath": "placeholder.html"
     }
 ]

@@ -51,23 +51,24 @@ body {
 
 .content-item {
     display: block;
-    margin: 25px 0;
+    margin: 35px 0;
     width: 100%;
-    /* min-height: 15vh; */
     background-color: #333333;
     overflow: hidden;
     border-radius: 25px;
-    -webkit-transition: width 2s;
-    transition: height 2s;
+    max-height: 15vh;
+    height: auto;
+    transition: max-height 1.5s;
 }
 
 .content-title {
-    margin: 35px;
+    margin: 0;
     height: 15vh;
     word-wrap: break-word;
     text-align: center;
     font-size: 32px;
     color: #FFFFFF;
+    line-height: 15vh;
 }
 
 .content-body {
@@ -76,7 +77,12 @@ body {
     text-align: justify;
     font-size: 1em;
     color: #FFFFFF;
-    display: none;
+    display: block;
+    
+}
+
+.content-item.open {
+    max-height: 1500px;
 }
 
 .content-image {
