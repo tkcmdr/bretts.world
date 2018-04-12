@@ -1,8 +1,6 @@
 var contentURL = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/data/content.json";
 var contentContainer = document.getElementById("content-container");
 
-var itemStyle1  = ""
-
 function CreateContentItem(item, side)
 {
     var newHTML = document.createElement("div");
@@ -31,14 +29,15 @@ function LoadContent()
         
         responseJSON.forEach(item =>
             {
+                var side = itemCounter%2==0 ? "Right" : "Left";
+                var newHTML = CreateContentItem(item, side);
+
                 setTimeout(function()
                 {
-                    var side = itemCounter%2==0 ? "Right" : "Left";
-                    var newHTML = CreateContentItem(item, side);
-                    
                     contentContainer.appendChild(newHTML);
-                    itemCounter++;
-                }, itemCounter * 500);
+                }, itemCounter * 250);
+
+                itemCounter++;                                
             });
         }
     }
