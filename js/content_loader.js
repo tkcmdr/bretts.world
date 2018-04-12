@@ -8,8 +8,8 @@ function CreateContentItem(item, isRight, contentID)
     var itemID  = "content-" + contentID;
     
     newHTML.innerHTML = "<img class='content-image' style='float:" +
-        (isRight?"right":"left") + "' src='img/" +
-        item.image + "'><h1 class='content-title'>" + 
+        (isRight?"right":"left") + "' src='" +
+        item.imagePath + "'><h1 class='content-title'>" + 
         item.title + "</h1><div id='" + itemID + "-body" + 
         "' class='content-body'></div>";
     newHTML.className       = "content-item";
