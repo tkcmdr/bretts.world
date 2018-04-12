@@ -81,7 +81,7 @@ body {
 
 @keyframes slideRight {
     0% {
-        transform: translate(200px, 0px);
+        transform: translate(-200px, 0px);
         opacity: 0;
     }
 
