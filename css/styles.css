@@ -62,13 +62,12 @@ body {
 }
 
 .content-title {
-    margin: 0;
+    margin: 35px;
     height: 15vh;
     word-wrap: break-word;
     text-align: center;
     font-size: 32px;
     color: #FFFFFF;
-    line-height: 15vh;
 }
 
 .content-body {
@@ -82,7 +81,7 @@ body {
 }
 
 .content-item.open {
-    max-height: 1500px;
+    max-height: 1500vh;
 }
 
 .content-image {
