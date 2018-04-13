@@ -3,13 +3,14 @@
     --text-color: #FFFFFF;
     --content-preview-height: 15vh;
     --background-color: #E6433E;
+    --fallback-font: sans-serif;
 }
 
 /* Main page styles */
 
 body {
     background-color: var(--background-color);
-    font-family: 'Play', sans-serif;
+    font-family: 'Play', var(--fallback-font);
 }
 
 #site-icon {
