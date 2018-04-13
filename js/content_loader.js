@@ -4,31 +4,47 @@ var contentContainer = document.getElementById("content-container");
 
 function CreateContentItem(item, isRight, contentID)
 {
-    var newHTML = document.createElement("div");
     var itemID  = "content-" + contentID;
     
-    newHTML.innerHTML = "<img class='content-image' style='float:" +
-        (isRight?"right":"left") + "' src='" +
-        item.imagePath + "'><h1 class='content-title'>" + 
-        item.title + "</h1><div id='" + itemID + "-body" + 
-        "' class='content-body'></div>";
-    newHTML.className       = "content-item";
-    newHTML.id              =  itemID;
-    newHTML.style.animation = "slide" + (isRight?"Right":"Left") + " 1.5s";
+    var content = document.createElement("div");
+    var image   = document.createElement("img");
+    var title   = document.createElement("h1");
+    var body    = document.createElement("div");
 
-    newHTML.addEventListener("click", function()
+    content.className       = "content-item";
+    content.id              =  itemID;
+    content.style.animation = "slide" + (isRight?"Right":"Left") + " 1.5s";
+
+    image.id        = itemID + "-img";
+    image.classList = "content-image";
+    image.style     = "float:" + (isRight?"right":"left");
+    image.src       = item.imagePath;
+
+    title.id        = itemID + "-title";
+    title.classList = "content-title";
+    title.innerHTML = item.title;
+
+    body.id         = itemID + "-body";
+    body.classList  = "content-body";
+
+    content.appendChild(image);
+    content.appendChild(title);
+    content.appendChild(body);
+    
+    title.addEventListener("click", function()
     {
         ToggleContent(itemID);
     });
 
-    return newHTML;
+    return content;
 }
 
 function LoadBodyContent(xhr, bodyID)
 {
+    console.log(bodyID);
     var body = document.getElementById(bodyID);
 
-    if (xhr.status == "200" && body != "undefined")
+    if (xhr.status == "200" && body)
     {
        body.innerHTML = xhr.responseText;
     }
