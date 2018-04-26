@@ -2,16 +2,16 @@
     {
         "title": "About Brett!",
         "imagePath": "img/articles/anon-avatar.png",
-        "articlePath": "about-me.html"
+        "articleName": "about-me"
     },
     {
         "title": "So you want to learn to program ROBLOX games? Start here!",
         "imagePath": "img/articles/tkcmdr-avatar.png",
-        "articlePath": "so-you-want-to-learn-roblox.html"
+        "articleName": "so-you-want-to-learn-roblox"
     },
     {
         "title": "The Art of War: A short literary review",
         "imagePath": "img/articles/art-of-war-book.jpg",
-        "articlePath": "art-of-war-review.html"
+        "articleName": "art-of-war-review"
     }
 ]
