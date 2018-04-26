@@ -11,7 +11,7 @@ function CreateContentItem(item, isRight, contentID)
     var title   = document.createElement("h1");
     var body    = document.createElement("div");
 
-    content.className       = "content-item";
+    content.classList       = "content-item";
     content.id              =  itemID;
     content.style.animation = "slide" + (isRight?"Right":"Left") + " 1.5s";
 
@@ -41,7 +41,6 @@ function CreateContentItem(item, isRight, contentID)
 
 function LoadBodyContent(xhr, bodyID)
 {
-    console.log(bodyID);
     var body = document.getElementById(bodyID);
 
     if (xhr.status == "200" && body)
@@ -72,7 +71,7 @@ function LoadContent()
                 DataRequest(
                     "text",
                     "GET",
-                    articleDir + item.articlePath,
+                    articleDir + item.articleName + ".html",
                     function()
                     {
                         LoadBodyContent(this, contentHTML.id + "-body");
@@ -93,8 +92,3 @@ function DataRequest(dataType, mode, url, callback, async, data)
     xhr.open(mode, url, async);
     xhr.send(data);
 }
-    
-window.addEventListener("load", function()
-{
-    DataRequest("text", "GET", contentURL, LoadContent, true);
-});

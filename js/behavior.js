@@ -6,3 +6,15 @@ function ToggleContent(contentID)
 {
     document.getElementById(contentID).classList.toggle("open");
 }
+
+window.addEventListener("load", function()
+{
+    var urlTarget = document.getElementById(location.hash);
+
+    DataRequest("text", "GET", contentURL, LoadContent, true);
+
+    if (urlTarget)
+    {
+        urlTarget.classList = "content-item open";
+    }
+});
