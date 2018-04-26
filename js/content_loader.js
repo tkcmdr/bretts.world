@@ -2,29 +2,27 @@ var contentURL = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/d
 var articleDir  = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/articles/";
 var contentContainer = document.getElementById("content-container");
 
-function CreateContentItem(item, isRight, contentID)
+function CreateContentItem(item, isRight, contentID, isURLTarget)
 {
-    var itemID  = "content-" + contentID;
-    
     var content = document.createElement("div");
     var image   = document.createElement("img");
     var title   = document.createElement("h1");
     var body    = document.createElement("div");
 
-    content.classList       = "content-item";
-    content.id              =  itemID;
+    content.classList       = "content-item" + (isURLTarget ? " open" : "");
+    content.id              =  contentID;
     content.style.animation = "slide" + (isRight?"Right":"Left") + " 1.5s";
 
-    image.id        = itemID + "-img";
+    image.id        = contentID + "-img";
     image.classList = "content-image";
     image.style     = "float:" + (isRight?"right":"left");
     image.src       = item.imagePath;
 
-    title.id        = itemID + "-title";
+    title.id        = contentID + "-title";
     title.classList = "content-title";
     title.innerHTML = item.title;
 
-    body.id         = itemID + "-body";
+    body.id         = contentID + "-body";
     body.classList  = "content-body";
 
     content.appendChild(image);
@@ -33,7 +31,7 @@ function CreateContentItem(item, isRight, contentID)
     
     title.addEventListener("click", function()
     {
-        ToggleContent(itemID);
+        ToggleContent(contentID);
     });
 
     return content;
@@ -62,7 +60,9 @@ function LoadContent()
             itemCounter++;
 
             var isRight     = itemCounter%2==0;
-            var contentHTML = CreateContentItem(item, isRight, itemCounter);
+            var isURLTarget = location.hash.substring(1) === item.articleName;
+            
+            var contentHTML = CreateContentItem(item, isRight, item.articleName, isURLTarget);
 
             setTimeout(function()
             {

@@ -1,5 +1,5 @@
 var contentContainer    = document.getElementById("content-container");
-var contentWindow       = document.getElementById("content-window")
+var contentWindow       = document.getElementById("content-window");
 var mainPage            = true;
 
 function ToggleContent(contentID)
@@ -9,12 +9,5 @@ function ToggleContent(contentID)
 
 window.addEventListener("load", function()
 {
-    var urlTarget = document.getElementById(location.hash);
-
     DataRequest("text", "GET", contentURL, LoadContent, true);
-
-    if (urlTarget)
-    {
-        urlTarget.classList = "content-item open";
-    }
 });
