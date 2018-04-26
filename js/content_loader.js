@@ -1,7 +1,7 @@
-var contentURL = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/data/content.json";
 var articleDir  = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/articles/";
 var contentContainer = document.getElementById("content-container");
 
+// A helper function to create a content element, then return it.
 function CreateContentItem(item, isRight, contentID, isURLTarget)
 {
     var content = document.createElement("div");
@@ -29,7 +29,13 @@ function CreateContentItem(item, isRight, contentID, isURLTarget)
     content.appendChild(title);
     content.appendChild(body);
     
+    // Adding event listeners to both the image and title are required, as adding an event listener to the parent element can lead to accidental closing of the content.
     title.addEventListener("click", function()
+    {
+        ToggleContent(contentID);
+    });
+    
+    image.addEventListener("click", function()
     {
         ToggleContent(contentID);
     });
@@ -37,6 +43,7 @@ function CreateContentItem(item, isRight, contentID, isURLTarget)
     return content;
 }
 
+// Called when the body of the content has been retrieved.
 function LoadBodyContent(xhr, bodyID)
 {
     var body = document.getElementById(bodyID);
@@ -47,6 +54,7 @@ function LoadBodyContent(xhr, bodyID)
     }
 }
 
+// Called when the page content is to be loaded.
 function LoadContent()
 {
     if (this.status == "200")
@@ -55,6 +63,7 @@ function LoadContent()
         var responseJSON    = JSON.parse(responseText);
         var itemCounter     = 0;
         
+        // Basically what we're doing here is looping through each article object, and rendering it into existence with a cool animation. Each object is loaded 0.250ms after the one before it, and the image and title are inverted for an even neater aesthetic.
         responseJSON.forEach(item =>
         {
             itemCounter++;
@@ -82,7 +91,8 @@ function LoadContent()
         });
     }
 }
-    
+
+// Helper function for using XMLHttpRequest.
 function DataRequest(dataType, mode, url, callback, async, data)
 {
     var xhr = new XMLHttpRequest();

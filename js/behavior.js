@@ -1,7 +1,6 @@
-var contentContainer    = document.getElementById("content-container");
-var contentWindow       = document.getElementById("content-window");
-var mainPage            = true;
+var contentURL = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/data/content.json";
 
+// Toggles the content in question open or closed.
 function ToggleContent(contentID)
 {
     document.getElementById(contentID).classList.toggle("open");
@@ -9,5 +8,6 @@ function ToggleContent(contentID)
 
 window.addEventListener("load", function()
 {
+    // We load all the page content when the page is ready.
     DataRequest("text", "GET", contentURL, LoadContent, true);
 });
