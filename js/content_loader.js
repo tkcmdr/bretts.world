@@ -1,5 +1,6 @@
-var articleDir  = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/articles/";
-var contentContainer = document.getElementById("content-container");
+var articleDir          = "https://raw.githubusercontent.com/tkcmdr/bretts.world/master/articles/";
+var contentContainer    = document.getElementById("content-container");
+var taglineElement      = document.getElementById("tagline-element");
 
 // A helper function to create a content element, then return it.
 function CreateContentItem(item, isRight, contentID, isURLTarget)
@@ -89,6 +90,15 @@ function LoadContent()
                 );
             }, itemCounter * 250);                                
         });
+    }
+}
+
+function LoadTagline()
+{
+    if (this.status == "200")
+    {
+        var response = JSON.parse(this.responseJSON);
+        taglineElement.innerHTML = response[Math.floor(Math.random()*response.length + 1)];
     }
 }
 
