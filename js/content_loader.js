@@ -97,7 +97,7 @@ function LoadTagline()
     if (this.status == "200")
     {
         var response = JSON.parse(this.response);
-        var number = Math.floor(Math.random()*(response.length + 1));
+        var number = Math.floor(Math.random()*response.length);
         console.log(number);
         taglineElement.innerHTML = response[number];
     }
