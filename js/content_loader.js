@@ -60,8 +60,7 @@ function LoadContent()
 {
     if (this.status == "200")
     {
-        var responseText    = this.response;
-        var responseJSON    = JSON.parse(responseText);
+        var responseJSON    = JSON.parse(this.response);
         var itemCounter     = 0;
         
         // Basically what we're doing here is looping through each article object, and rendering it into existence with a cool animation. Each object is loaded 0.250ms after the one before it, and the image and title are inverted for an even neater aesthetic.
@@ -97,7 +96,7 @@ function LoadTagline()
 {
     if (this.status == "200")
     {
-        var response = JSON.parse(this.responseJSON);
+        var response = JSON.parse(this.response);
         taglineElement.innerHTML = response[Math.floor(Math.random()*response.length + 1)];
     }
 }
