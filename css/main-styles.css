@@ -60,11 +60,11 @@ body {
     background-color: var(--secondary-background-color);
     overflow: hidden;
     border-radius: 8px;
+    min-height: 25vh;
     max-height: var(--content-preview-height);
-    /* min-height: 25vh; */
-    height: auto;
+    /* height: auto; */
     transition: max-height 1.5s;
-    /* background-image: linear-gradient(to bottom, var(--secondary-background-color) 50%, var(--text-color) 100%); */
+    background-image: linear-gradient(to bottom, var(--secondary-background-color) 50%, var(--text-color) 100%);
 }
 
 .content-title {
@@ -86,7 +86,7 @@ body {
 
 .content-item.open {
     max-height: 1500vh;
-    /* background-image: none; */
+    background-image: none;
 }
 
 .content-image {
