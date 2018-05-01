@@ -74,6 +74,7 @@ body {
     word-wrap: break-word;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .content-body {
@@ -92,6 +93,7 @@ body {
 .content-image {
     height: var(--content-preview-height);
     float: left;
+    cursor: pointer;
 }
 
 a {
