@@ -101,6 +101,20 @@ a {
     color: var(--background-color);
 }
 
+/* Content body styles */
+
+.table {
+    text-align:left;
+    margin: 0 auto;
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 2px solid #FFFFFF;
+    padding: 5px;
+}
+
 /* Animations */
 
 @keyframes slideLeft {
