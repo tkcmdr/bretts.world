@@ -98,7 +98,6 @@ function LoadTagline()
     {
         var response = JSON.parse(this.response);
         var number = Math.floor(Math.random()*response.length);
-        console.log(number);
         taglineElement.innerHTML = response[number];
     }
 }
