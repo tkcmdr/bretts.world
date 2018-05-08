@@ -81,12 +81,12 @@ body {
     border-radius: 8px;
 }
 
-.content-item-fade {
+.content-item.fade {
     min-height: 25vh;
     background-image: linear-gradient(to bottom, var(--secondary-background-color) 50%, var(--text-color) 100%);
 }
 
-.article {
+.content-item.article {
     max-height: var(--content-preview-height);
     transition: max-height 1.5s;
 }
