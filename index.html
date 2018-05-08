@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--
-    Shoutout to the awesome people at https://bambicon.com for providing the awesome icons used for this site! This site uses Bambicon's Education collection of icons. Another shoutout to Jonas Hecksher for his wonderful font, 'Play!'
+    Shoutout to the awesome people at https://bambicon.com for providing the awesome icons used for this site! This site uses Bambicon's Education collection of icons, as well as FIVEicons' Iconaza Circle Social collection found on Iconfinder. Another shoutout to Jonas Hecksher for his wonderful font, 'Play!'
 -->
 
 <html>
@@ -16,13 +16,27 @@
         <!-- The content of the page, changed dynamically -->
         <div id="main" class="main">
             <!-- The topmost navigation menu -->
-            <div class="page-header">
+            <div class="header" id="header">
                 <img src="img/globe.svg" id=site-icon>
                 <h1 class="header-text">bretts.world</h1>
                 <h1 class="header-text right" id="tagline-element"></h1>
             </div>
 
             <div id="content-container"></div>
+
+            <div class="content-item footer" id="footer">
+                <p id="copyright-notice">© 2018 Brett Hudson</p>
+
+                <a href="rss/feed.xml" title="Subscribe to my RSS feed!">
+                    <img src="img/rss.svg" class="social-media-image">
+                </a>
+                <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fbretts.world" title="Share this page on Facebook!">
+                    <img src="img/facebook.svg" class="social-media-image">
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbretts.world&text=Visit+Brett's+world+at:" title="Share this page on Twitter!">
+                    <img src="img/twitter.svg" class="social-media-image">
+                </a>
+            </div>
         </div>
 
         <!-- Scripts that drive the site interactivity -->

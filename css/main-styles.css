@@ -25,9 +25,15 @@ body {
     max-width: 800px;
 }
 
-/* Header stlyes */
+.social-media-image {
+    margin: 2.5px;
+    height: 30px;
+    float: right;
+}
 
-.page-header {
+/* Header/Footer stlyes */
+
+.header {
     color: var(--text-color);
     height: var(--header-height);
     width: 100%;
@@ -51,6 +57,18 @@ body {
     float: right;
 }
 
+.footer {
+    text-align: left;
+    font-size: 15px;
+    height: 35px;
+}
+
+#copyright-notice {
+    display: inline-block;
+    height: 15px;
+    margin: 10px;
+}
+
 /* Content Styles */
 
 .content-item {
@@ -58,13 +76,19 @@ body {
     margin: 35px 0;
     width: 100%;
     background-color: var(--secondary-background-color);
+    color: var(--text-color);
     overflow: hidden;
     border-radius: 8px;
-    /* min-height: 25vh; */
+}
+
+.content-item-fade {
+    min-height: 25vh;
+    background-image: linear-gradient(to bottom, var(--secondary-background-color) 50%, var(--text-color) 100%);
+}
+
+.content-item.article {
     max-height: var(--content-preview-height);
-    /* height: auto; */
     transition: max-height 1.5s;
-    /* background-image: linear-gradient(to bottom, var(--secondary-background-color) 50%, var(--text-color) 100%); */
 }
 
 .content-title {

@@ -10,7 +10,7 @@ function CreateContentItem(item, isRight, contentID, isURLTarget)
     var title   = document.createElement("h1");
     var body    = document.createElement("div");
 
-    content.classList       = "content-item" + (isURLTarget ? " open" : "");
+    content.classList       = "content-item article" + (isURLTarget ? " open" : "");
     content.id              =  contentID;
     content.style.animation = "slide" + (isRight?"Right":"Left") + " 1.5s";
 

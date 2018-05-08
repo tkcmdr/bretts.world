@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rss version="2.0">
+    <channel>
+        <title>bretts.world</title>
+        <link>https://bretts.world</link>
+        <description>The bretts.world super-ultra-duper RSS feed!</description>
+
+        <item>
+            <title>About me!</title>
+            <link>https://bretts.world#about-me</link>
+            <guid>https://bretts.world#about-me</guid>
+            <pubDate>Thu, 12 Apr 2018 15:53:00 EDT</pubDate>
+            <description>A short intro to the Brettmeister himself.</description>
+        </item>
+        <item>
+            <title>So you want to learn to program ROBLOX games? Start here!</title>
+            <link>https://bretts.world#so-you-want-to-learn-roblox</link>
+            <guid>https://bretts.world#so-you-want-to-learn-roblox</guid>
+            <pubDate>Thu, 12 Apr 2018 15:53:00 EDT</pubDate>
+            <description>An introduction to the world of ROBLOX game development.</description>
+        </item>
+        <item>
+            <title>The Art of War: A short literary review</title>
+            <link>https://bretts.world#art-of-war-review</link>
+            <guid>https://bretts.world#art-of-war-review</guid>
+            <pubDate>Thu, 26 Apr 2018 14:51:00 EDT</pubDate>
+            <description>A short literary review of Samuel B. Griffith's translation of Sun Tzu's The Art of War.</description>
+        </item>
+    </channel>
+</rss>
