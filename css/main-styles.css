@@ -26,8 +26,8 @@ body {
 }
 
 .social-media-image {
-    margin: 2.5px;
-    height: 30px;
+    margin: 0.5vh;
+    height: 4vh;
     float: right;
 }
 
@@ -59,8 +59,8 @@ body {
 
 .footer {
     text-align: left;
-    font-size: 15px;
-    height: 35px;
+    font-size: 2vh;
+    height: 5vh;
 }
 
 #copyright-notice {
