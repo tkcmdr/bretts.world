@@ -23,6 +23,7 @@ body {
 .main {
     margin: 30px auto;
     max-width: 800px;
+    overflow: hidden;
 }
 
 .social-media-image {
@@ -143,7 +144,7 @@ a {
 
 @keyframes slideLeft {
     0% {
-        transform: translate(200px, 0px);
+        transform: translate(800px, 0px);
         opacity: 0;
     }
 
@@ -155,7 +156,7 @@ a {
 
 @keyframes slideRight {
     0% {
-        transform: translate(-200px, 0px);
+        transform: translate(-800px, 0px);
         opacity: 0;
     }
 
