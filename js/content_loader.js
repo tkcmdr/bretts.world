@@ -31,12 +31,18 @@ function LoadContent()
 function CreateContentItem(item, isRight, contentID, isURLTarget)
 {
     var content = document.createElement("div");
+    var image   = document.createElement("img");
     var title   = document.createElement("h1");
     var body    = document.createElement("div");
 
     content.classList       = "content-item article" + (isURLTarget ? " open" : "");
     content.id              =  contentID;
     content.style.animation = "slide" + (isRight?"Right":"Left") + " 2s";
+
+    image.id        = contentID + "-img";
+    image.classList = "content-image";
+    image.style     = "float:" + (isRight?"right":"left");
+    image.src       = item.imagePath;
 
     title.id        = contentID + "-title";
     title.classList = "content-title";
@@ -45,30 +51,20 @@ function CreateContentItem(item, isRight, contentID, isURLTarget)
     body.id         = contentID + "-body";
     body.classList  = "content-body";
 
+    content.appendChild(image);
+    content.appendChild(title);
+    content.appendChild(body);
+    
+    // Adding event listeners to both the image and title are required, as adding an event listener to the parent element can lead to accidental closing of the content.
     title.addEventListener("click", function()
     {
         ToggleContent(contentID);
     });
-
-    if (item.imagePath != "null")
+    
+    image.addEventListener("click", function()
     {
-        var image   = document.createElement("img");
-
-        image.id        = contentID + "-img";
-        image.classList = "content-image";
-        image.style     = "float:" + (isRight?"right":"left");
-        image.src       = item.imagePath;
-
-        image.addEventListener("click", function()
-        {
-            ToggleContent(contentID);
-        });
-
-        content.appendChild(image);
-    }
-
-    content.appendChild(title);
-    content.appendChild(body);
+        ToggleContent(contentID);
+    });
 
     return content;
 }
